@@ -1,0 +1,21 @@
+<div class="banner-section" id="bannerId">
+  <swiper-container class="banner-swiper"  autoplay-delay="2500" autoplay-disable-on-interaction="false" effect="fade">
+    @for (img of listImages; track img) {
+      <swiper-slide *ngFor="let img of listImages">
+        <img [src]="img" alt="banner image" class="banner-image">
+      </swiper-slide>
+    } @empty {
+      <swiper-slide>
+        <h1>Data Kosong</h1>
+      </swiper-slide>
+    }
+  </swiper-container>
+  <div class="banner-overlay">
+    <div class="banner-layer"></div>
+    <div class="banner-description">
+      <h1>Universitas Teknologi Yogyakarta</h1>
+      <h2>“Cepat Lulus, Cepat Karier, dan Cepat Sukses”</h2>
+      <button mat-flat-button class="btn-pendaftaran">Registration PDB 2023/2024</button>
+    </div>
+  </div>
+</div>
